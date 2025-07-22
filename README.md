@@ -1,14 +1,12 @@
 # Board Task Manager
 
-Este é um projeto de criação de um gerenciador de Boards de Tarefas desenvolvido em Java, utilizando o banco de dados SQLite. O objetivo é permitir a criação e gerenciamento de quadros (boards) com colunas e cartões (cards),
-facilitando a organização de tarefas de forma visual e simples.
-
-
+Este é um projeto de criação de um gerenciador de Boards de Tarefas desenvolvido em Java, utilizando o banco de dados SQLite. O objetivo é permitir a criação e gerenciamento de quadros (boards) com colunas e cartões (cards), facilitando a organização de tarefas de forma visual e simples. 
+Cada tarefa pode ser classificada em uma **categoria** e associada a um **status**, facilitando o acompanhamento do fluxo de trabalho.  
 
 ## Funcionalidades
 
-- Criar múltiplos boards (quadros) para diferentes projetos ou times.
-- Adicionar colunas personalizadas em cada board (ex: Inicial, Pendente, Final, Cancelado).
+- Criar e gerenciar **boards** com colunas personalizadas.
+- Classificação por **categorias** (ex: Inicial, Pendente, Final, Cancelado).
 - Criar, mover, bloquear, desbloquear e cancelar cards (tarefas) dentro das colunas.
 - Visualizar detalhes de boards, colunas e cards.
 - Interface de linha de comando (CLI) para interação.
@@ -23,6 +21,8 @@ facilitando a organização de tarefas de forma visual e simples.
 
 
 ## Estrutura do Projeto
+
+O projeto segue **boas práticas de organização**, dividindo **DTOs, serviços, repositórios, entidades e camadas de persistência**.
 
 ```
 board.db                # Banco de dados SQLite
@@ -40,7 +40,14 @@ src/
         web/            # Interface web (HTML, CSS, JS)
 ```
 
+## Diagrama de Classes**  
+
+Aqui está o **diagrama de classes atualizado**, refletindo a nova estrutura do projeto: 
+
+
+
 ## Como Executar
+
 
 1. **Pré-requisitos:** 
    - Java 21 
