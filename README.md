@@ -40,11 +40,43 @@ src/
         web/            # Interface web (HTML, CSS, JS)
 ```
 
-## Diagrama de Classes**  
+## Diagrama de Classes 
 
 Aqui está o **diagrama de classes atualizado**, refletindo a nova estrutura do projeto: 
 
+```mermaid
+erDiagram
+    Board {
+        BIGINT id PK
+        VARCHAR name
+    }
 
+    Category {
+        ENUM Pessoal
+        ENUM Trabalho
+        ENUM Estudo
+    }
+
+    Status {
+        ENUM Inicial
+        ENUM Pendente
+        ENUM Finalizado
+        ENUM Cancelado
+    }
+
+    Task {
+        BIGINT id PK
+        VARCHAR title
+        TEXT description
+        Category category
+        Status status
+        BIGINT board_id FK
+    }
+
+    Board ||--o| Task : contains
+    Task ||--|{ Category : belongs_to
+    Task ||--|{ Status : has_status
+```
 
 ## Como Executar
 
@@ -65,7 +97,7 @@ Aqui está o **diagrama de classes atualizado**, refletindo a nova estrutura do 
    Ou rode a classe `MainMenu` pela sua IDE.
 
 4. **Banco de Dados:**
-   O banco será criado automaticamente na raiz do projeto (`board.db`). O script `schema.sql` define as tabelas necessárias.
+   O banco de dados será criado automaticamente na raiz do projeto (`board.db`). O script `schema.sql` define as tabelas necessárias.
 
 
 
