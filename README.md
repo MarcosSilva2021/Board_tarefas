@@ -14,7 +14,7 @@ Cada tarefa pode ser classificada em uma **categoria** e associada a um **status
 
 ## Tecnologias Utilizadas
 
-- **Java 17**
+- **Java 21**
 - **SQLite** 
 - **Maven**
 - **HTML, CSS, JavaScript**
